@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.exceptions import HTTPException
 
-from logger import UVICORN_LOGGING_CONFIG, STRUCTLOG_FORMATTERS, STDLIB_FORMATTERS
+from logger import UVICORN_LOGGING_CONFIG
 
 
 app = FastAPI()
@@ -19,4 +19,4 @@ def exception(status_code: int):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, log_config=UVICORN_LOGGING_CONFIG)
+    uvicorn.run(app)
