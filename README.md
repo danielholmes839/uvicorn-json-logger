@@ -1,6 +1,8 @@
 # FastAPI/Uvicorn JSON Logger Config
 
-Example for overriding the uvicorn logger to output logs in JSON:
+This repository shows how to override Uvicorn’s default loggers to emit structured JSON logs without using any external dependencies
+
+Here's the JSON output:
 
 ```json
 {"system": "uvicorn", "timestamp": "2025-07-06T20:50:47.793969Z", "level": "INFO", "event": "Started server process [135051]"}
@@ -21,3 +23,11 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 INFO:     127.0.0.1:50980 - "GET / HTTP/1.1" 200 OK
 INFO:     127.0.0.1:50986 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 ```
+
+## Commands
+
+`uv sync` to install FastAPI/Uvicorn, and `uv run main.py` to start the application
+
+## References
+
+- [mCoding Python logging tutorial](https://github.com/mCodingLLC/VideosSampleCode/tree/master/videos/135_modern_logging). This is a great explanation on how to configure Python loggers

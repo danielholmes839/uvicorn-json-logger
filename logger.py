@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 
 
 class UvicornJSONLogFormatter(logging.Formatter):
-    def format(self, record):
+    def format(self, record: logging.LogRecord):
         return json.dumps(
             {
                 "system": "uvicorn",
@@ -16,7 +16,7 @@ class UvicornJSONLogFormatter(logging.Formatter):
 
 
 class UvicornJSONAccessLogFormatter(logging.Formatter):
-    def format(self, record):
+    def format(self, record: logging.LogRecord):
         (client, method, path, http_version, status_code) = record.args
 
         return json.dumps(
